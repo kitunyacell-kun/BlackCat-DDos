@@ -39,13 +39,11 @@ elif len(sys.argv) == 4:
     port = int(sys.argv[2])
     num_requests = int(sys.argv[3])
 
-finally:
+else:
     print(f"\033[97m ╔{'═' * 80}╗")
     print(f"\033[97m ║ \033[100m{' ' * 4}v.1.0{' ' * 69}\033[0m ║")
     print(f"\033[97m ║ \033[100m{' ' * 4}https://www.https//kunkaffa@gmail.com{' ' * 37}\033[0m ║")
     print(f"\033[97m ╚{'═' * 80}╝")
-
-else:  
     print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     sys.exit(1)
 
@@ -68,10 +66,10 @@ def print_status():
     thread_num_mutex.acquire(True)
 
     thread_num += 1
-    print("""
+    print("
     sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]} \033[38;5;57m Get-started\033[0m \033[33" +str(host)+ " \033[32mIp-asdress \033[38;5;206m" +ip+ "\033[0m")
     sys.stdout.write(f"\r*\033[103m[{str(thread_num)}] \033[37m Get-started\033[0m \033[33m" +str(host)+ " \033[95mIp-address \033[37m" +ip+ "\033[0m")
-    """
+    ")
     sys.stdout.flush()
     thread_num_mutex.release()
 
