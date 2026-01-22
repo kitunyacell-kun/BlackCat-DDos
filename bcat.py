@@ -62,12 +62,12 @@ def print_status():
 
     thread_num += 1
     #print the output on the sameline
-    sys.stdout.write(f"\r\033[33m{time.ctime().split( )[3]} [{str(thread_num)}] ")
+    sys.stdout.write(f"\r\033[33m{time.ctime().split( )[3]}\033[0m ")
     sys.stdout.flush()
-    print (f"\033[92m[H\033[33mA\033[32mQ\033[33m-4] \033[32mREQUEST_NUM \033[92m" +str(ip)+ "\033[0m")
-    sys.stdout.write(f"\r\033[95m{time.ctime().split( )[3]}\033[94m [{str(thread_num)}] ")
+    print (f"\033[92mGet-started \033[33m" +str(host)+ " \033[32mIp \033[92m" +str(ip)+ "\033[0m")
+    sys.stdout.write(f"\r\033[94m [{str(thread_num)}]\033[0m ")
     sys.stdout.flush()
-    print (f"\033[33m[H\033[37mA\033[33mQ\033[37m-4] \033[36mREQUEST_NUM \033[35m" +str(ip)+ "\033[0m")
+    print (f"\033[33mGet-started \033[37m" +str(host+ " \033[36mIp \033[35m" +(ip)+ "\033[0m")
     thread_num_mutex.release()
 
 
