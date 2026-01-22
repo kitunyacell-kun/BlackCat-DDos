@@ -40,11 +40,11 @@ elif len(sys.argv) == 4:
     num_requests = int(sys.argv[3])
 
 else:
+    print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     print(f"\033[97m ╔{'═' * 80}╗")
     print(f"\033[97m ║ \033[100m{' ' * 4}v.1.0{' ' * 69}\033[0m ║")
     print(f"\033[97m ║ \033[100m{' ' * 4}https://www.https//kunkaffa@gmail.com{' ' * 37}\033[0m ║")
     print(f"\033[97m ╚{'═' * 80}╝")
-    print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     sys.exit(1)
 
 # Convert FQDN to IP
