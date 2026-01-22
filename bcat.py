@@ -40,8 +40,8 @@ elif len(sys.argv) == 4:
     num_requests = int(sys.argv[3])
 else:
     print(f"\033[97m ╔{'═' * 76}╗")
-    print(f"\033[97m ║\033[100m{' ' * 4}KunFayz{' ' * 63} \033[0m║")
-    print(f"\033[97m ║\033[100m{' ' * 4}Kun kanamlah walantakun kadipda{' ' * 33} \033[0m║")
+    print(f"\033[97m ║\033[100m{' ' * 4}KunFayz{' ' * 64} \033[0m║")
+    print(f"\033[97m ║\033[100m{' ' * 4}Kun kanamlah walantakun kadipda{' ' * 39} \033[0m║")
     print(f"\033[97m ╚{'═' * 76}╝")
     print (f"ERROR\n Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     sys.exit(1)
