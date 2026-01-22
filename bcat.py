@@ -66,7 +66,8 @@ def print_status():
 
     thread_num += 1
     print("")
-    sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]}
+    sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]} \033[38;5;39mGet started \033[38;5;206m" +str(host)+ "
+                     \033[32m" +ip+ "")
     sys.stdout.flush()
     print("")
     sys.stdout.write(f"\r*\033[103m[{str(thread_num)}]\033[0m")
@@ -105,7 +106,7 @@ def attack():
         dos.close()
 
 
-print (f"[#] Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_requests)}")
+print (f"[#] Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_req" +uests)}")
 
 # Spawn a thread per request
 all_threads = []
