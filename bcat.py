@@ -27,7 +27,8 @@ logo = """
 ║\033[37m                               ——o0o——                           \033[31m║
 ╚══════════════════════════════════════════════════════╝
 """
-
+faded_text = fade.fire(logo)
+print(faded_text)
 # Parse inputs
 host = ""
 ip = ""
