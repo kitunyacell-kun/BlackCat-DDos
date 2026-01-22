@@ -20,12 +20,6 @@ logo = """
  ▒▒▒██████╔╝▒▒██████╗██╔═══██║▒▒██████╗▒██║▒▒▒██╚╗▒▒██████╗██╔═══██║▒▒██║▒▒▒▒▒▒
  ▒▒▒╚═════╝▒▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═════╝▒╚═╝▒▒▒╚══╝▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═╝▒▒▒▒▒▒
  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-╔══════════════════════════════════════════════════════╗
-║\033[33m                ~ H U D A I R U L  A L - A Q S H A ~             \033[31m║
-║\033[32m                    I N T E R N A L  S C R I P T                 \033[31m║
-║\033[96m                           By: Aby'Walidein                      \033[31m║
-║\033[37m                               ——o0o——                           \033[31m║
-╚══════════════════════════════════════════════════════╝
 """
 faded_text = fade.fire(logo)
 print(faded_text)
@@ -45,6 +39,10 @@ elif len(sys.argv) == 4:
     port = int(sys.argv[2])
     num_requests = int(sys.argv[3])
 else:
+    print(f"\033[97m ╔{'═' * 80}╗")
+    print(f"\033[97m ║ \033[100m{' ' * 4}v.1.0{' ' * 69}\033[0m ║")
+    print(f"\033[97m ║ \033[100m{' ' * 4}https://www.https//kunkaffa@gmail.com{' ' * 37}\033[0m ║")
+    print(f"\033[97m ╚{'═' * 80}╝")
     print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
     sys.exit(1)
 
@@ -68,7 +66,7 @@ def print_status():
 
     thread_num += 1
     print("")
-    sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]}\033[0m")
+    sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]}
     sys.stdout.flush()
     print("")
     sys.stdout.write(f"\r*\033[103m[{str(thread_num)}]\033[0m")
