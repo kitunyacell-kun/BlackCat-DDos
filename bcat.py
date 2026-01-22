@@ -73,7 +73,6 @@ def print_status():
     sys.stdout.flush()
     thread_num_mutex.release()
 
-
 # Generate URL Path
 def generate_url_path():
     msg = str(string.ascii_letters + string.digits + string.punctuation)
@@ -105,7 +104,7 @@ def attack():
         dos.close()
 
 
-print (f"[#] Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_req" +uests)}")
+print (f"[#] Attack started on {host} ({ip} ) || Port: {str(port)} || # Requests: {str(num_requests)}")
 
 # Spawn a thread per request
 all_threads = []
