@@ -21,6 +21,10 @@ logo = """
  ▒▒▒╚═════╝▒▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═════╝▒╚═╝▒▒▒╚══╝▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═╝▒▒▒▒▒▒
  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 """
+print(f"\033[97m ╔{'═' * 80}╗")
+print(f"\033[97m ║ \033[100m{' ' * 4}v.1.0{' ' * 69}\033[0m ║")
+print(f"\033[97m ║ \033[100m{' ' * 4}https://www.https//kunkaffa@gmail.com{' ' * 37}\033[0m ║")
+print(f"\033[97m ╚{'═' * 80}╝")
 faded_text = fade.fire(logo)
 print(faded_text)
 # Parse inputs
@@ -38,13 +42,8 @@ elif len(sys.argv) == 3:
 elif len(sys.argv) == 4:
     port = int(sys.argv[2])
     num_requests = int(sys.argv[3])
-
 else:
     print(f"\n\033[32m Usage: {sys.argv[0]} < Hostname > < Port > < Number_of_Attacks >")
-    print(f"\033[97m ╔{'═' * 80}╗")
-    print(f"\033[97m ║ \033[100m{' ' * 4}v.1.0{' ' * 69}\033[0m ║")
-    print(f"\033[97m ║ \033[100m{' ' * 4}https://www.https//kunkaffa@gmail.com{' ' * 37}\033[0m ║")
-    print(f"\033[97m ╚{'═' * 80}╝")
     sys.exit(1)
 
 # Convert FQDN to IP
