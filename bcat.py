@@ -68,11 +68,10 @@ def print_status():
     thread_num_mutex.acquire(True)
 
     thread_num += 1
-    print("")
+    print("""
     sys.stdout.write(f"\r\033[102m\033[30m{time.ctime().split( )[3]} \033[38;5;57m Get-started\033[0m \033[33" +str(host)+ " \033[32mIp-asdress \033[38;5;206m" +ip+ "\033[0m")
-    sys.stdout.flush()
-    print("")
     sys.stdout.write(f"\r*\033[103m[{str(thread_num)}] \033[37m Get-started\033[0m \033[33m" +str(host)+ " \033[95mIp-address \033[37m" +ip+ "\033[0m")
+    """
     sys.stdout.flush()
     thread_num_mutex.release()
 
