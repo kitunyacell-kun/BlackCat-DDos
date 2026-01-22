@@ -62,7 +62,7 @@ def print_status():
 
     thread_num += 1
     #print the output on the sameline
-    sys.stdout.write(f"\r\033[33m{time.ctime().split( )[3]}\033[0m ")
+    sys.stdout.write(f"\r\033[48;5;7m\033[38;5;0m{time.ctime().split( )[3]}\033[0m ")
     sys.stdout.flush()
     print (f"\033[92mGet-started \033[33m" +str(host)+ " \033[32mIp \033[92m" +(ip)+ "")
     sys.stdout.write(f"\r\033[48;5;4m[{str(thread_num)}]\033[0m ")
