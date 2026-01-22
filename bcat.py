@@ -64,10 +64,10 @@ def print_status():
     #print the output on the sameline
     sys.stdout.write(f"\r\033[33m{time.ctime().split( )[3]}\033[0m ")
     sys.stdout.flush()
-    print (f"\033[92mGet-started \033[33m" +str(host)+ " \033[32mIp \033[92m" +str(ip)+ "\033[0m")
+    print (f"\033[92mGet-started \033[33m" +str(host)+ " \033[32mIp \033[92m" +(ip)+ "")
     sys.stdout.write(f"\r\033[94m [{str(thread_num)}]\033[0m ")
     sys.stdout.flush()
-    print (f"\033[33mGet-started \033[37m" +str(host+ " \033[36mIp \033[35m" +(ip)+ "\033[0m")
+    print (f"\033[33mGet-started \033[37m" +str(host+ " \033[36mIp \033[35m" +(ip)+ "")
     thread_num_mutex.release()
 
 
