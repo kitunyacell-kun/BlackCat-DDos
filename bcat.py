@@ -62,6 +62,7 @@ thread_num_mutex = threading.Lock()
 
 # Print thread status
 def print_status():
+    print("")
     global thread_num
     thread_num_mutex.acquire(True)
     thread_num += 1
