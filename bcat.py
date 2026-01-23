@@ -20,9 +20,25 @@ logo = """
  ▒▒▒██████╔╝▒▒██████╗██╔═══██║▒▒██████╗▒██║▒▒▒██╚╗▒▒██████╗██╔═══██║▒▒██║▒▒▒▒▒▒
  ▒▒▒╚═════╝▒▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═════╝▒╚═╝▒▒▒╚══╝▒▒╚═════╝╚═╝▒▒▒╚═╝▒▒╚═╝▒▒▒▒▒▒
  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+\033[38;5;5m╔══════════════════════════════════════════════════╗\033[0m
+\033[38;5;5m║\033[48;5;7m \033[30mStory: Dipaksa waras di negri yang gila\033[48;5;7m          \033[0m\033[38;5;5m║
+\033[38;5;5m║\033[48;5;7m \033[30mdan 0rang memilih jadi termul dibanding logika\033[48;5;7m   \033[0m\033[38;5;5m║
+\033[38;5;5m║\033[48;5;7m \033[30mNegri para bedebah berjaya  🤣😂\033[48;5;7m                 \033[0m\033[38;5;5m║
+\033[38;5;5m╚══════════════════════════════════════════════════╝
 """
 faded_text = fade.fire(logo)
 print(faded_text)
+while attemps < 100:
+    username = input("\033[32m┏> Enter your username:\033[30m")
+    password = input("\033[32m┗> Enter your password:\033[30m")
+
+    if username == 'capeya dipaskey muluk' and password == 'capeya dipaskey muluk':
+        print("\033[48;5;3m•••⟩⟩ Zona attack sikucing hitam...!!\033[0m")
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 # Parse inputs
 host = ""
 ip = ""
